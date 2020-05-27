@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!-- 
+  Author: Mirak Bumnanpol
+  Student Number: c3320409
+  Name of document: dataCollection.html
+  Assignent 2 SENG1050
+  Date file was created 8th May 2019
+  -->
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="../cssFiles/styletwo.css"> <!--Link to the external CSS style sheet-->
+<title>Customer Survey Form</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<header>
+	<h1>Customer Survey Form</h1> <!-- Title of webpage-->
+	</header>
+<section>
+	<nav> <!-- Navigation back to homepage and privacy content-->
+   <div>
+    <ul>
+      <li><a href="indextwo.html">Home</a></li>
+      <li><a href="https://visser.io/tools/living-in-australia/privacy-policy-generator/"> Privacy Policy </a></li>
+      <li><a href="https://www.termsfeed.com/blog/wp-content/uploads/2019/04/terms-and-conditions-template.pdf"> Terms and Conditions </a></li>
+      <li><a href="https://www.impactbnd.com/blog/best-about-us-pages"> About Us </a></li>
+      <li><a href="https://www.ventureharbour.com/15-contact-form-examples-help-design-ultimate-contact-page/"> Contact </a></li>
+    </ul>
+  </div>
+  </nav>
+<article>
+  <p style="color:black;font-size: 14pt; padding:10px;"> <!-- Instyling for the part of the body-->
+  	This is a customer survey form. This is optional to fill in.
+  </p>
+
+  <form name="survey" method="get" action="http://evc-cit.info/cgi-bin/echoform.cgi" onsubmit="return validateForm();">
+
+  	<fieldset> 					<!-- This fieldset holds a customer's personal information-->
+  		<legend>
+  			Your Information
+  		</legend>
+
+  		<p style="color:grey; font-size:10pt;">Fields marked with <span class="required">*</span> is compulsory</p>
+
+  		First Name: <input type="text" placeholder="Jane" name="firstName">			<!-- Textboxes used to obtain this information-->
+  		<span class="required">*</span><br>
+  		Last Name: <input type="text" placeholder="Smith" name="lastName">
+  		<span class="required">*</span><br><br>
+  		Phone Number: <input type="text" placeholder="0400000000" name="phoneNumber">
+  		<span class="required">*</span><br>
+  		Email Address: <input type="text" placeholder="janesmith@gmail.com" name="emailAddress">
+  		<span class="required">*</span><br><br>
+  		Address: <input type="text" placeholder="123 Darling St" name="streetAddress">
+  		<span class="required">*</span><br>
+  		Post Code: <input type="text" placeholder="2000" size="4" name="postcode">
+  		<span class="required">*</span><br>
+  		State:<span class="required">*</span> <select name="state">					<!-- Dropdown bar for choosing the state-->
+  			<option value="Select" selected="selected">Select</option>
+  			<option value="ACT">ACT</option>
+  			<option value="NSW">NSW</option>
+  			<option value="WA">WA</option>
+  			<option value="NT">NT</option>
+  			<option value="QLD">QLD</option>
+  			<option value="TAS">TAS</option>
+  			<option value="SA">SA</option>
+  		</select><br><br>
+  		Age Range:<br>																<!-- Radio buttons for choosing the age range -->
+  		<div class="radioButton"> <input type="radio" value="less than 20" name="age"> Less than 20 years old<br></div>	
+  		<div class="radioButton"><input type="radio" value="20-30" name="age"> 20-30 years old<br></div>
+  		<div class="radioButton"><input type="radio" value="31-40" name="age"> 31-40 years old<br></div>
+  		<div class="radioButton"><input type="radio" value="41-50" name="age"> 41-50 years old<br></div>
+  		<div class="radioButton"><input type="radio" value="51-60" name="age"> 51-60 years old<br></div>
+  		<div class="radioButton"><input type="radio" value="more than 60" name="age"> More than 60 years old<br></div>
+  		<div class="radioButton"><input type="radio" value="prefer not to say" name="age"> Prefer not to say<br></div>
+
+  	</fieldset><br>
+  	<fieldset>				<!-- This fieldset is for the survey questions-->
+  		<legend>Survey Questions</legend>
+  		<ol>
+  			<li>
+  				Would you use this website again?<span class="required">*</span><br> 				<!-- Radio buttons for choosing these options -->
+  				<div class="radioButton"> <input type="radio" value="Yes" name="website"> Yes<br></div>
+		  		<div class="radioButton"> <input type="radio" value="Probably" name="website"> Probably<br></div>
+		  		<div class="radioButton"> <input type="radio" value="Probably not" name="website"> Probably not<br></div>
+		  		<div class="radioButton"> <input type="radio" value="No" name="website"> No<br></div>
+  			<br></li>
+  			<li>
+  				Justify above answer:<span class="required">*</span><br>			<!-- Text area for justifying the decision above -->
+  				<textarea name="whyYouLike" rows="4" cols=40></textarea>
+  			<br></li>
+  			<li>
+  				What cuisine would you like us to add next? <span class="required">*</span><br>		<!-- Checkbox for what cuisine customers want to see next -->
+  				<div class="radioButton"> <input type="checkbox" name="cuisine" value="American">American<br></div>
+  				<div class="radioButton"> <input type="checkbox" name="cuisine" value="Mexican">Mexican<br></div>
+  				<div class="radioButton"> <input type="checkbox" name="cuisine" value="German">German<br></div>
+  				<div class="radioButton"> <input type="checkbox" name="cuisine" value="Indonsian">Indonesian<br></div>
+  				<div class="radioButton"> <input type="checkbox" name="cuisine" value="Japanese">Japanese<br></div>
+  				<div class="radioButton"> <input type="checkbox" name="cuisine" value="other">Other<br></div>
+  			<br></li>
+  			<li>
+  				Specify other<span class="required">*</span>: 
+  				<input type="text" name="other">	<!-- Textboxes used for any other cuisine the customer wants -->
+  			</li>
+  		</ol>
+  	</fieldset><br>
+  	<fieldset>
+  		<legend>Submit</legend>
+  		<input type="submit" name="submit">
+  		<input type="Reset" name="Reset">
+  	</fieldset>
+  </form>
+   <div class="copyright"> <!--copyright acknowledge with information about me such as name and email-->
+    <h4><u style="color:#b3b3b3; font-size: 12pt; margin-left: 30px;">Copyright Information </u> </h4> 
+    <!--more inline CSS to help with formatting the copyright information-->
+        <p style="color:#b3b3b3; font-size: 12pt; margin-left: 30px;">Mirak Bumnanpol </p> 
+        <p style="color:#b3b3b3; font-size: 12pt; margin-left: 30px;">c3320409@uon.edu.au </p>
+    </div>
+</article>
+</section>
+<script type = "text/javascript">
+	function validateSurvey()										//Function used to validate survey
+	{
+		if(document.survey.firstName.value =="")					//Checks if first name is entered
+		{
+			alert("Please enter your first name: ");
+			document.survey.firstName.focus();
+			return false;
+		}
+
+		else if(document.survey.lastName.value =="")				//Checks if last name was entered
+		{
+			alert("Please enter your last name: ");
+			document.survey.lastName.focus();
+			return false;
+		}
+
+		else if(document.survey.emailAddress.value =="")			//Checks if email address was entered
+		{
+			alert("Please enter your email address: ");
+			document.survey.emailAddress.focus();
+			return false;
+		}
+
+		else if (!document.survey.age[0].checked &&					//Check for age range
+				!document.survey.age[1].checked &&
+				!document.survey.age[2].checked &&
+				!document.survey.age[3].checked &&
+				!document.survey.age[4].checked &&
+				!document.survey.age[5].checked &&
+				!document.survey.age[6].checked &&)
+		{
+			alert("Please select age");
+			document.survey.age.focus();
+			return false;
+		}
+
+		else if(document.survey.streetAddress.value=="")			//Check for street address
+		{
+			alert("Please enter your street address: ");
+			document.survey.streetAddress.focus();
+			return false;
+		}
+
+		else if(document.survey.suburb.value=="")					//Checks for suburb
+		{
+			alert("Please enter your suburb: ");
+			document.survey.suburb.focus();
+			return false;
+		}
+
+		else if(document.survey.postCode.value=="")					//Checks for postcode
+		{
+			alert("Please enter your postcode: ");
+			document.survey.postCode.focus();
+			return false;
+		}
+
+		else if(document.survey.state.selectedIndex==0)				//Checks for state 
+		{
+			alert("Please enter your state: ");
+			document.survey.state.focus();
+			return false;
+		}
+
+		else if(document.survey.phoneNumber.value =="")				//Checks if phone number was entered 
+		{
+			alert("Please enter your phone number: ");
+			document.survey.phoneNumber.focus();
+			return false;
+		}
+
+		else
+		{
+			return true;
+		}
+	}
+
+	function validateSurveyQuestions()								//Function used to validate the survey questions
+	{
+		if(!document.survey.website[0].checked &&					//Checks to see if reason was selected
+			!document.survey.website[1].checked &&
+			!document.survey.website[2].checked &&
+			!document.survey.website[3].checked &&)
+		{
+			alert("Please select one.")
+			document.surveyQuestion.website.focus();
+			return false;
+		}
+		else if(!document.survey.age[0].checked &&					//Checks to see if any other cuisine type was selected
+			!document.survey.cuisine[1].checked &&
+			!document.survey.cuisine[2].checked &&
+			!document.survey.cuisine[3].checked &&
+			!document.survey.cuisine[4].checked &&
+			!document.survey.cuisine[5].checked &&)
+		{
+			alert("Please select one.");
+			document.surveyQuestion.cuisine.focus();
+			return false;
+		}
+
+		else
+		{
+			return true;
+		}
+
+	}
+</script>
+</body> 
+</html>

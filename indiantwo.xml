@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xmlFiles/cuisine.xsl"?>
+<!DOCTYPE cuisine [
+<!-- 
+  Author: Mirak Bumnanpol
+  Student Number: c3320409
+  Name of document: indian.xml
+  Assignent 2 SENG1050
+  Date file was created 10th April 2019
+  Date file was modified for Assignment 2 7th May 2019
+  -->
+
+<!ELEMENT cuisine (cuisineType)>
+	<!ELEMENT cuisineType (restaurant*)>
+
+		<!ELEMENT restaurant (restaurantinfo)>
+		<!ELEMENT restaurantinfo (restaurantname, restaurantlogo?, restaurantpicture+, url, address, phonenumber+, restaurantdescription, openinghours, delivery, minimumprice, deliveryfee, ratings, testimonials, bestrateddish)>
+		<!ELEMENT restaurantname (#PCDATA)>
+		<!ELEMENT restaurantlogo (#PCDATA)>
+		<!ELEMENT restaurantpicture (#PCDATA)>
+		<!ELEMENT url (#PCDATA)>
+		<!ELEMENT address (#PCDATA)>
+		<!ELEMENT phonenumber (#PCDATA)>
+
+		<!ELEMENT restaurantdescription (#PCDATA)>
+
+		<!ELEMENT openinghours (monday, tuesday, wednesday, thursday, friday, saturday, sunday)>
+		<!ELEMENT monday (#PCDATA)>
+		<!ELEMENT tuesday (#PCDATA)>
+		<!ELEMENT wednesday (#PCDATA)>
+		<!ELEMENT thursday (#PCDATA)>
+		<!ELEMENT friday (#PCDATA)>
+		<!ELEMENT saturday (#PCDATA)>
+		<!ELEMENT sunday (#PCDATA)>
+
+		<!ELEMENT delivery (minimumprice, deliveryfee)>
+		<!ELEMENT minimumprice (#PCDATA)>
+		<!ELEMENT deliveryfee (#PCDATA)>
+
+		<!ELEMENT ratings (#PCDATA)>
+		<!ELEMENT testimonials (#PCDATA)>
+		<!ELEMENT bestrateddish (#PCDATA)>
+
+]>
+
+<cuisine>
+
+	<cuisineType> Indian
+
+		<restaurant>
+			<restaurantinfo>
+				<restaurantname>Heart of India</restaurantname>
+				<restaurantlogo>heartofindia.jpg</restaurantlogo>
+				<restaurantpicture>heartofindiapicture.jpg</restaurantpicture>
+				<url>heartofindia.com</url>
+				<address>22 Ace Av, Toronto CANADA</address>
+				<phonenumber>479428389</phonenumber>
+				<restaurantdescription>Heart of India is made all by hand and all from scratch.</restaurantdescription>
+				<delivery>We deliver to suburbs within a 5 mile radius of the restaurant
+					<minimumprice>$15</minimumprice>
+					<deliveryfee>NONE</deliveryfee>
+				</delivery>
+				<ratings>4.1</ratings>
+				<testimonials>"Yummy yummy"</testimonials>
+				<bestrateddish>Butter Chicken</bestrateddish>
+				<openinghours>
+					<monday>9am-5pm</monday>
+					<tuesday>9am-5pm</tuesday>
+					<wednesday>9am-5pm</wednesday>
+					<thursday>9am-11pm</thursday>
+					<friday>9am-5pm</friday>
+					<saturday>9:30am-5pm</saturday>
+					<sunday>CLOSED</sunday>
+				</openinghours>
+			</restaurantinfo>
+		</restaurant>
+
+		<restaurant>
+			<restaurantinfo>
+				<restaurantname>Indian Accent</restaurantname>
+				<restaurantlogo>indianaccent.jpg</restaurantlogo>
+				<restaurantpicture>indianaccentpicture.jpc</restaurantpicture>
+				<url>indianaccent.com.au</url>
+				<address>99 Hudson St 2939 VIC</address>
+				<phonenumber>0924738101</phonenumber>
+				<restaurantdescription>Where India comes to life.</restaurantdescription>
+				<delivery>We deliver to suburbs within a 5km radius of the restaurant
+					<minimumprice>$40</minimumprice>
+					<deliveryfee>NONE</deliveryfee>
+				</delivery>
+				<ratings>5.0</ratings>
+				<testimonials>"The all time best place to get Indian food"</testimonials>
+				<bestrateddish>Samosa</bestrateddish>
+				<openinghours>
+					<monday>11am-9pm</monday>
+					<tuesday>11am-9pm</tuesday>
+					<wednesday>11am-9pm</wednesday>
+					<thursday>11am-9pm</thursday>
+					<friday>11am-9pm</friday>
+					<saturday>11am-9pm</saturday>
+					<sunday>11am-9pm</sunday>
+				</openinghours>
+			</restaurantinfo>
+		</restaurant>
+
+		<restaurant>
+			<restaurantinfo>
+				<restaurantname>Tamarind Junoon</restaurantname>
+				<restaurantlogo>tamarindjunoon.jpg</restaurantlogo>
+				<restaurantpicture>tamarindjunoonpicture.jpg</restaurantpicture>
+				<url>tamarindjunoon.net.au</url>
+				<address>5/129 Tilli Rd, Jindabyne 1299 ACT</address>
+				<phonenumber>0428884729</phonenumber>
+				<restaurantdescription>Best Indian in all of ACT.</restaurantdescription>
+				<delivery>We deliver to suburbs within a 5km radius of the restaurant
+					<minimumprice>$30</minimumprice>
+					<deliveryfee>$5</deliveryfee>
+				</delivery>
+				<ratings>4.6</ratings>
+				<testimonials>"I would drive 4 hours for these dishes"</testimonials>
+				<bestrateddish>Biryani</bestrateddish>
+							<openinghours>
+					<monday>10am-10pm</monday>
+					<tuesday>CLOSED</tuesday>
+					<wednesday>CLOSED</wednesday>
+					<thursday>10am-10pm</thursday>
+					<friday>10am-10pm</friday>
+					<saturday>10am-10pm</saturday>
+					<sunday>10am-10pm</sunday>
+				</openinghours>
+			</restaurantinfo>
+		</restaurant>
+		
+	</cuisineType>
+
+</cuisine>

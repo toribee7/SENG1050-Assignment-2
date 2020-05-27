@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xmlFiles/cuisine.xsl"?>
+<!DOCTYPE cuisine [
+<!-- 
+  Author: Mirak Bumnanpol
+  Student Number: c3320409
+  Name of document: thai.xml
+  Assignent 2 SENG1050
+  Date file was created 10th April 2019
+  Date file was modified for Assignment 2 7th May 2019
+  -->
+
+<!ELEMENT cuisine (cuisineType)>
+	<!ELEMENT cuisineType (restaurant*)>
+
+		<!ELEMENT restaurant (restaurantinfo)>
+		<!ELEMENT restaurantinfo (restaurantname, restaurantlogo?, restaurantpicture+, url, address, phonenumber+, restaurantdescription, openinghours, delivery, minimumprice, deliveryfee, ratings, testimonials, bestrateddish)>
+		<!ELEMENT restaurantname (#PCDATA)>
+		<!ELEMENT restaurantlogo (#PCDATA)>
+		<!ELEMENT restaurantpicture (#PCDATA)>
+		<!ELEMENT url (#PCDATA)>
+		<!ELEMENT address (#PCDATA)>
+		<!ELEMENT phonenumber (#PCDATA)>
+
+		<!ELEMENT restaurantdescription (#PCDATA)>
+
+		<!ELEMENT openinghours (monday, tuesday, wednesday, thursday, friday, saturday, sunday)>
+		<!ELEMENT monday (#PCDATA)>
+		<!ELEMENT tuesday (#PCDATA)>
+		<!ELEMENT wednesday (#PCDATA)>
+		<!ELEMENT thursday (#PCDATA)>
+		<!ELEMENT friday (#PCDATA)>
+		<!ELEMENT saturday (#PCDATA)>
+		<!ELEMENT sunday (#PCDATA)>
+
+		<!ELEMENT delivery (minimumprice, deliveryfee)>
+		<!ELEMENT minimumprice (#PCDATA)>
+		<!ELEMENT deliveryfee (#PCDATA)>
+
+		<!ELEMENT ratings (#PCDATA)>
+		<!ELEMENT testimonials (#PCDATA)>
+		<!ELEMENT bestrateddish (#PCDATA)>
+
+]>
+
+<cuisine>
+
+	<cuisineType> Thai
+
+		<restaurant>
+			<restaurantinfo>
+				<restaurantname>Thai Cafe</restaurantname>
+				<restaurantlogo>thaicafe.jpg</restaurantlogo>
+				<restaurantpicture>thaicafepicture.jpg</restaurantpicture>
+				<url>https://www.thaicafe.com.au</url>
+				<address>2/43 Penn Rd, Little Bay NSW 2934</address>
+				<phonenumber>0294729475</phonenumber>
+				<restaurantdescription>This Thai cafe is the heart of Little Bay, boasting 5 sites statewide.</restaurantdescription>
+				<delivery>We deliver to suburbs within a 10km radius of the cafe's
+					<minimumprice>$30</minimumprice>
+					<deliveryfee>$7</deliveryfee>
+				</delivery>
+				<ratings>4.8</ratings>
+				<testimonials>"This cafe was amazing!"</testimonials>
+				<bestrateddish>Pad Thai Chicken</bestrateddish>
+				<openinghours>
+					<monday>9am-5pm</monday>
+					<tuesday>9am-5pm</tuesday>
+					<wednesday>9am-5pm</wednesday>
+					<thursday>9am-10pm</thursday>
+					<friday>9am-5pm</friday>
+					<saturday>10am-5pm</saturday>
+					<sunday>10am-5pm</sunday>
+				</openinghours>
+			</restaurantinfo>
+		</restaurant>
+
+		<restaurant>
+			<restaurantinfo>
+				<restaurantname>Swing Thai</restaurantname>
+				<restaurantlogo>swingthai.jpg</restaurantlogo>
+				<restaurantpicture>swingthaipicture.jpg</restaurantpicture>
+				<url>https://www.swingthai.com</url>
+				<address>170 Snape St, Maroubra NSW 2020</address>
+				<phonenumber>0219383749</phonenumber>
+				<restaurantdescription>Swing Thai is the new up and coming fusion thai.</restaurantdescription>
+				<delivery>We deliver to suburbs within a 10km radius of the restaurant
+					<minimumprice>$35</minimumprice>
+					<deliveryfee>$5</deliveryfee>
+				</delivery>
+				<ratings>4.3</ratings>
+				<testimonials>"Great atmosphere"</testimonials>
+				<bestrateddish>Fried Rice Prawn</bestrateddish>
+				<openinghours>
+					<monday>8am-10pm</monday>
+					<tuesday>8am-10pm</tuesday>
+					<wednesday>8am-10pm</wednesday>
+					<thursday>8am-10pm</thursday>
+					<friday>8am-10pm</friday>
+					<saturday>8am-10pm</saturday>
+					<sunday>8am-10pm</sunday>
+				</openinghours>
+			</restaurantinfo>
+		</restaurant>
+
+		<restaurant>
+			<restaurantinfo>
+				<restaurantname>Little Serow</restaurantname>
+				<restaurantlogo>littleserow.jpg</restaurantlogo>
+				<restaurantpicture>littleserowpicture.jpg</restaurantpicture>
+				<url>https://www.littleseroww.com</url>
+				<address>2 Queen St, Fischer VIC 3829</address>
+				<phonenumber>0284931036</phonenumber>
+				<restaurantdescription>Traditional thai food where it's made best!</restaurantdescription>
+				<delivery>We deliver to suburbs within a 5km radius of the restaurant
+					<minimumprice>$25</minimumprice>
+					<deliveryfee>$7</deliveryfee>
+				</delivery>
+				<ratings>4.9</ratings>
+				<testimonials>"Feels like I'm back in Phuket!"</testimonials>
+				<bestrateddish>Panang Curry</bestrateddish>
+				<openinghours>
+					<monday>11am-9pm</monday>
+					<tuesday>11am-9pm</tuesday>
+					<wednesday>11am-9pm</wednesday>
+					<thursday>11am-9pm</thursday>
+					<friday>11am-9pm</friday>
+					<saturday>11am-9pm</saturday>
+					<sunday>11am-9pm</sunday>
+				</openinghours>
+			</restaurantinfo>
+		</restaurant>
+		
+	</cuisineType>
+
+</cuisine>

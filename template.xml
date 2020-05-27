@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xmlFiles/cuisine.xsl"?>
+<!DOCTYPE cuisine [
+<!-- 
+  Author: Mirak Bumnanpol
+  Student Number: c3320409
+  Name of document: Index.xml
+  Assignent 2 SENG1050
+  Date file was created 10th April 2019
+  Date file was modified for Assignment 2 7th May 2019
+  -->
+
+<!ELEMENT cuisine (cuisineType)>
+	<!ELEMENT cuisineType (restaurant*)>
+
+		<!ELEMENT restaurant (restaurantinfo)>
+		<!ELEMENT restaurantinfo (restaurantname, restaurantlogo?, restaurantpicture+, url, address, phonenumber+, restaurantdescription, openinghours, delivery, minimumprice, deliveryfee, ratings, testimonials, bestrateddish)>
+		<!ELEMENT restaurantname (#PCDATA)>
+		<!ELEMENT restaurantlogo (#PCDATA)>
+		<!ELEMENT restaurantpicture (#PCDATA)>
+		<!ELEMENT url (#PCDATA)>
+		<!ELEMENT address (#PCDATA)>
+		<!ELEMENT phonenumber (#PCDATA)>
+
+		<!ELEMENT restaurantdescription (#PCDATA)>
+
+		<!ELEMENT openinghours (monday, tuesday, wednesday, thursday, friday, saturday, sunday)>
+		<!ELEMENT monday (#PCDATA)>
+		<!ELEMENT tuesday (#PCDATA)>
+		<!ELEMENT wednesday (#PCDATA)>
+		<!ELEMENT thursday (#PCDATA)>
+		<!ELEMENT friday (#PCDATA)>
+		<!ELEMENT saturday (#PCDATA)>
+		<!ELEMENT sunday (#PCDATA)>
+
+		<!ELEMENT delivery (minimumprice, deliveryfee)>
+		<!ELEMENT minimumprice (#PCDATA)>
+		<!ELEMENT deliveryfee (#PCDATA)>
+
+		<!ELEMENT ratings (#PCDATA)>
+		<!ELEMENT testimonials (#PCDATA)>
+		<!ELEMENT bestrateddish (#PCDATA)>
+
+]>
+
+<cuisine>
+
+	<cuisineType>
+
+		<restaurant>
+			<restaurantinfo>
+			<restaurantname></restaurantname>
+			<restaurantlogo></restaurantlogo>
+			<restaurantpicture></restaurantpicture>
+			<url></url>
+			<address></address>
+			<phonenumber></phonenumber>
+			<restaurantdescription></restaurantdescription>
+			<delivery>
+				<minimumprice></minimumprice>
+				<deliveryfee></deliveryfee>
+			</delivery>
+			<ratings></ratings>
+			<testimonials></testimonials>
+			<bestrateddish></bestrateddish>
+			<openinghours>
+				<monday></monday>
+				<tuesday></tuesday>
+				<wednesday></wednesday>
+				<thursday></thursday>
+				<friday></friday>
+				<saturday></saturday>
+				<sunday></sunday>
+			</openinghours>
+		</restaurantinfo>
+		</restaurant>
+
+		<restaurant>
+			<restaurantinfo>
+			<restaurantname></restaurantname>
+			<restaurantlogo></restaurantlogo>
+			<restaurantpicture></restaurantpicture>
+			<url></url>
+			<address></address>
+			<phonenumber></phonenumber>
+			<restaurantdescription></restaurantdescription>
+			<delivery>
+				<minimumprice></minimumprice>
+				<deliveryfee></deliveryfee>
+			</delivery>
+			<ratings></ratings>
+			<testimonials></testimonials>
+			<bestrateddish></bestrateddish>
+			<openinghours>
+				<monday></monday>
+				<tuesday></tuesday>
+				<wednesday></wednesday>
+				<thursday></thursday>
+				<friday></friday>
+				<saturday></saturday>
+				<sunday></sunday>
+			</openinghours>
+		</restaurantinfo>
+		</restaurant>
+
+		<restaurant>
+			<restaurantinfo>
+			<restaurantname></restaurantname>
+			<restaurantlogo></restaurantlogo>
+			<restaurantpicture></restaurantpicture>
+			<url></url>
+			<address></address>
+			<phonenumber></phonenumber>
+			<restaurantdescription></restaurantdescription>
+			<delivery>
+				<minimumprice></minimumprice>
+				<deliveryfee></deliveryfee>
+			</delivery>
+			<ratings></ratings>
+			<testimonials></testimonials>
+			<bestrateddish></bestrateddish>
+			<openinghours>
+				<monday></monday>
+				<tuesday></tuesday>
+				<wednesday></wednesday>
+				<thursday></thursday>
+				<friday></friday>
+				<saturday></saturday>
+				<sunday></sunday>
+			</openinghours>
+		</restaurantinfo>
+		</restaurant>
+		
+	</cuisineType>
+
+</cuisine>
